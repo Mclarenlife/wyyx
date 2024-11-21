@@ -1,0 +1,46 @@
+.MAC-card {
+    width: 660px;
+    height: 420px;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    /* background-color: #011522; */
+    border-radius: 8px;
+    position: absolute;
+    top: 10px;
+    left: 640px;
+    z-index: -1;
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 4px 8px;
+
+   }
+   
+   .MAC-tools {
+    display: flex;
+    align-items: center;
+    padding: 9px;
+   }
+   
+   .MAC-circle {
+    padding: 0 4px;
+   }
+   
+   .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+   }
+   
+   .red {
+    background-color: #ff605c;
+   }
+   
+   .yellow {
+    background-color: #ffbd44;
+   }
+   
+   .green {
+    background-color: #00ca4e;
+   }
+   

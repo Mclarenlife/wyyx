@@ -1,0 +1,49 @@
+.leftSticky2{
+    width: 126px;
+    height: 410px;
+    float: left;
+    margin-left: 50px;
+    position: sticky;
+    top: 100px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 30px;
+    /* backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0, 0.009);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 4px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(229, 229, 229, 0.35) solid;
+    border-right: 2px rgba(229, 229, 229, 0.35) solid; */
+    
+    z-index: 10;
+
+}
+
+.rightSticky2{
+    width: 126px;
+    height: 410px;
+    float: right;
+    margin-right: 50px;
+    position: sticky;
+    top: 100px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* border-radius: 30px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0, 0.009);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 4px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(229, 229, 229, 0.35) solid;
+    border-right: 2px rgba(229, 229, 229, 0.35) solid; */
+    
+    z-index: 10;
+  
+}

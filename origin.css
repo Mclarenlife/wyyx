@@ -1,0 +1,1441 @@
+
+    /* 清除原生自带的样式 */
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    /* 根节点的样式 */
+    body{
+      width: 100%;
+    }
+    /* 主容器的样式 */
+    .wyContainer{
+      height: 2000px;
+      /* 最小宽度 */
+      min-width: 1150px;
+      /* background-color: antiquewhite; */
+      position: relative;
+    }
+   
+/* *********************************************************************************************************** */
+
+    /* 顶部区域的样式 */
+    .header{
+      width: 100%;
+      height: 176px;
+      background-color: transparent;
+      /* background-color: gainsboro; */
+    }
+    /* 顶部导航栏区域的样式 */
+    .header .headerNav{
+      width: 100%;
+      height: 36px;
+      background-color: #333333;
+    }
+    /* 顶部导航栏的样式 */
+    .headerNav .nav{
+      width: 1090px;
+      height: 36px;
+      background-color: white;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      background-color: #333333;
+    }
+    /* 每一个导航子选项样式 */
+    .nav>div{
+        line-height: 36px;
+        cursor: pointer;
+        font-size: 12px;
+        color: #cccccc;
+    }
+    /* 给第四个div设置样式 */
+    .nav>div:nth-child(4){
+      color: #cc9756;
+      position: relative;
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 企业采购下拉列表样式 */
+      .nav>div:nth-child(4) .selectMenu{
+        width: 83px;
+        height: 100px;
+        background-color: white;
+        position: absolute;
+        left: 11px;
+        display: none;
+        /* 阴影 */
+        box-shadow: 0 0 5px rgb(165, 165, 165) ;
+      }
+      /* 鼠标移入企业采购时弹出下拉列表 */
+      .nav>div:nth-child(4):hover .selectMenu{
+        display: block;
+      }
+      /* 列表项的样式 */
+      .selectMenu>div{
+        width: 70%;
+        line-height: 33px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 12px;
+        color: #999999;
+      }
+      .selectMenu>div:nth-child(n+3){
+        border-top: 1px solid gainsboro;
+      }
+      /* 鼠标悬停变色 */
+      .nav>div:hover{
+        color: white;
+      }
+  /* ------------------------------------------------------------------------------- */
+    /* 客户服务下拉列表样式 */
+      .nav>div:nth-child(5) .selectMenu2{
+        width: 83px;
+        height: 132px;
+        background-color: white;
+        position: relative;
+        left: 11px;
+        display: none;
+        /* 阴影 */
+        box-shadow: 0 0 5px rgb(165, 165, 165) ;
+      }
+      /* 鼠标移入客户服务时弹出下拉列表 */
+      .nav>div:nth-child(5):hover .selectMenu2{
+        display: block;
+      }
+      /* 列表项的样式 */
+      .selectMenu2>div{
+        width: 70%;
+        line-height: 33px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 12px;
+        color: #999999;
+      }
+      .selectMenu2>div:nth-child(n+3){
+        border-top: 1px solid gainsboro;
+      }
+      /* 鼠标悬停变色 */
+      .nav>div:hover{
+        color: white;
+      }
+      /* APP下拉列表样式 */
+      .nav>div:nth-child(6) .app{
+        width: 160px;
+        height: 160px;
+        background-color: white;
+        position: relative;
+        left: 11px;
+        display: none;
+        /* 阴影 */
+        box-shadow: 0 0 5px rgb(165, 165, 165) ;
+        z-index: 10;
+      }
+      /* 鼠标移入APP时弹出下拉列表 */
+      .nav>div:nth-child(6):hover .app{
+        display: block;
+      }
+      /* 列表项的样式 */
+      .app .appText{
+        width: 70%;
+        line-height: 33px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 12px;
+        color: #999999;
+      }
+      .app .appImg{
+        width: 130px;
+        height: 130px;
+        margin: 0 auto;
+      }
+      
+  /* ------------------------------------------------------------------------------- */
+    /* 每一个导航子选项前的边框样式 */
+    .nav>div:nth-child(n+2)::before{
+        content: '';
+        display: inline-block;
+        height: 16px;
+        border-left: 1px solid #5c5c5c;
+        vertical-align: middle;
+        margin: 0 10px;
+    }
+    /* 字体图标样式 */
+    .icon-xiangxiajiantou{
+        font-size: 8px;
+        color: white;
+    }
+    .icon-shouji-copy{
+        font-size: 12px;
+        color: white;
+    }
+    .icon-xiangxiasanjiao{
+      color: white;
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      margin-left: -8px;
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 搜索区域的样式 */
+    .searchArea{
+      width: 1090px;
+      height: 110px;
+      margin: 0 auto;
+      display: flex;
+    }
+    /* logo区域样式 */
+    .searchArea .logo{
+      width: 20%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    /* logo样式 */
+    .logo img{
+      width: 100%;
+    }
+    /* 搜索框样式 */
+    .searchArea .sInput{
+      width: 60%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .searchArea .sInput .input{
+      width: 530px;
+      height: 38px;
+      display: flex;
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 输入框样式 */
+    .searchArea .sInput .input input{
+      width: 80%;
+      height: 100%;
+      border: 1px solid #cc9756;
+      box-sizing: border-box;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      outline: none;
+      /* 背景图片属性 */
+      background-image: url('./static/searchLOGO.png');
+      background-repeat: no-repeat;
+      background-size: 18px 18px;
+      background-position: 10px center;
+      /* 光标位置 */
+      padding-left: 38px;
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 搜索按钮样式 */
+    .searchArea .sInput .input div{
+      width: 20%;
+      height: 100%;
+      background-color: #cc9756;
+      color: white;
+      text-align: center;
+      line-height: 38px;
+      cursor: pointer;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    /* 搜索按钮悬停变色 */
+    .searchArea .sInput .input div:hover{
+      background-color: #d9bc99;
+    }
+  /* ------------------------------------------------------------------------------- */
+   /*搜索推荐样式  */
+    .searchArea .sInput .searchText{
+      width: 400px;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+    /* 搜索推荐文字样式 */
+    .searchArea .sInput .searchText div{
+      font-size: 12px;
+      color: #999999;
+      cursor: pointer;
+    }
+    /* 搜索推荐文字悬停变色 */
+    .searchArea .sInput .searchText div:hover{
+      color: #cc9756;
+    }
+    .searchArea .sInput .searchText div:nth-child(n+2)::before{
+      content: '';
+      display: inline-block;
+      height: 16px;
+      border-left: 1px solid #bababa;
+      vertical-align: middle;
+      margin: 0 10px;
+    }
+    .searchArea .sInput .searchText div:nth-child(2){
+      color: #cc9756;
+    }
+   
+  /* ------------------------------------------------------------------------------- */
+    /* 购物车样式 */
+    .searchArea .shopCar{
+      width: 20%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* 购物车图标样式 */
+    .shopCar .shopIcon{
+      width: 60%;
+      height: 40px;
+      border: 1px solid #cc9756;
+      line-height: 40px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      border-radius: 20px;
+      color: #cc9756;
+    }
+    /* 购物车图标悬停变色 */
+    .shopCar .shopIcon:hover{
+      background-color: #cc97562a;
+    }
+    /* 购物车数量样式 */
+    .shopCar .shopIcon .count{
+      width: 20px;
+      height: 20px;
+      line-height: 16px;
+      background-color: red;
+      border-radius: 50%;
+      text-align: center;
+      color: white;
+      padding-top: 2px;
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 横向导航菜单样式 */
+    .menu{
+      width: 1090px;
+      height: 30px;
+      margin: 0 auto;
+    }
+    /* 横向导航菜单列表样式 */
+    .menu .menuList{
+      width: 1090px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    /* 设置航向导航菜单列表项 */
+    .menu .menuList li a{
+      text-decoration: none;
+      color: #333333;
+      font-weight: bolder;
+      font-size: 14px;
+    }
+    /* 横向导航菜单列表项悬停变色 */
+    .menu .menuList li a:hover{
+      color: #cc9756;
+      /* 下划线 */
+      border-bottom: 3px solid #cc9756;
+      /* 下划线距离 */
+      padding-bottom: 4px;
+
+    }
+    /* 横向导航菜单列表项第一个a标签样式 */
+    .menu .menuList li:first-child a{
+      color: #cc9756;
+      /* 下划线 */
+      border-bottom: 3px solid #cc9756;
+      /* 下划线距离 */
+      padding-bottom: 4px;
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 居家生活样式 */
+    .homeLife{
+      position: relative;
+      z-index: 10;
+    }
+    /* 商品分类列表 */
+    .menu .menuList li:nth-child(2) .showList1{
+      width: 462px;
+      height: 566px;
+      background-color: white;
+      box-shadow: 0 0 5px rgb(222, 222, 222);
+      position: absolute;
+      display: none;
+      margin-top: 7px;
+      opacity: 0;
+      /* display: flex; */
+    }
+    /* 商品分类列表悬停显示 */
+    .menu .menuList li:nth-child(2):hover .showList1{
+      display: block;
+      opacity: 1;
+      transition: all 0.3s;      
+    }
+    /* 家纺床品样式 */
+    .showList1-Block1{
+      width: 66%;
+      height: 100%;
+      float: left;
+    }
+    /* 家纺床品标题样式 */
+    .showList1-Block1-title{
+      width: 80%;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 15px;
+      margin-top: 11px;
+      text-align: left;
+      border-bottom: 1px solid rgba(208, 208, 208, 0.679);
+      font-size: 16px;
+      font-weight: bolder;
+      color: #333333;
+    }
+    /* 家纺床品列表样式 */
+    .showList1-Block1-list{
+      width: 100%;
+      height: 526px;
+      line-height: 10px;
+      margin-top: 5px;
+      margin-left: 10px;
+      margin-right: 17px;
+      font-size: 12px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .showList1-Block1-list>div:hover{
+      color: #cc9756;
+      cursor: pointer;
+      }
+    /* 床垫床褥样式 */
+    .showList1-Block2{
+      width: 33%;
+      height: 100%;
+      float: right;
+    }
+    /* 床垫床褥标题样式 */
+    .showList-Block2-title{
+      width: 80%;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 15px;
+      margin-top: 11px;
+      text-align: left;
+      border-bottom: 1px solid rgba(208, 208, 208, 0.679);
+      font-size: 16px;
+      font-weight: bolder;
+      color: #333333;
+    }
+    /* 床垫床褥列表样式 */
+    .showList-Block2-list{
+      width: 100%;
+      height: 526px;
+      line-height: 10px;
+      margin-top: 5px;
+      margin-left: 17px;
+      margin-right: 17px;
+      font-size: 12px;
+    }
+    .showList-Block2-list>div:hover{
+      color: #cc9756;
+      cursor: pointer;
+    }
+/* *********************************************************************************************************** */
+    /* 内容展示区样式 */
+    .content{
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      z-index: -10;
+    }
+
+    
+    /* 网站展示图片样式 */
+    .content .glassImg{
+      width: 1920px;
+      height: 420px;
+      margin: 2px auto;
+      position: relative;    
+      z-index: 1;
+    }
+    /* 毛玻璃效果 */
+    .glass-container{
+        width: 50%;
+        height: 70%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 23px;
+        backdrop-filter: blur(6px);
+        background-color: rgba(255,255,255, 0.12);
+        box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+        border: 0px rgba(255,255,255,0.4) solid;
+        border-bottom: 0px rgba(40,40,40,0.35) solid;
+        border-right: 0px rgba(40,40,40,0.35) solid;
+        position: absolute;
+        top:60px;
+        left: 360px;
+    }
+    .glass-container .glassLogo{
+        width: 200px;
+        height: 200px;
+        border-radius: 23px;
+    }
+    .glass-container .glassLogo img{
+        width: 100%;
+        height: 100%;
+        border-radius: 23px;
+        text-shadow: 1px 1px 2px #333333;
+        transform: rotate(0deg);
+        transition: all 1s;
+        margin-left: 50px;
+    }
+    .glass-container:hover .glassLogo img{
+        transform: rotate(720deg);
+        transition: all 1s;
+    }
+    .glass-container .glassText{
+        width: 50%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .glass-container .glassText  .glassText-t1 {
+      position: relative;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #fff;
+      letter-spacing: 5px;
+      z-index: 1;
+      animation: shift 1s ease-in-out infinite alternate;
+      margin-left: 90px;
+    }
+
+    .glassText-t1:before,
+    .glassText-t1:after {
+      display: block;
+      content: attr(data-glitch);
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.8;
+    }
+
+    .glassText-t1:before {
+      animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+      color: #8b00ff;
+      z-index: -1;
+    }
+
+    .glassText-t1:after {
+      animation: glitch 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+      color: #00e571;
+      z-index: -2;
+    }
+
+    @keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-3px, 3px);
+    }
+
+    40% {
+        transform: translate(-3px, -3px);
+    }
+
+    60% {
+        transform: translate(3px, 3px);
+    }
+
+    80% {
+        transform: translate(3px, -3px);
+    }
+
+    to {
+        transform: translate(0);
+    }
+    }
+
+    @keyframes shift {
+    0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100% {
+        transform: skewX(0deg);
+    }
+
+    41% {
+        transform: skewX(10deg);
+    }
+
+    42% {
+        transform: skewX(-10deg);
+    }
+
+    59% {
+        transform: skewX(40deg) skewY(10deg);
+    }
+
+    60% {
+        transform: skewX(-40deg) skewY(-10deg);
+    }
+
+    63% {
+        transform: skewX(10deg) skewY(-5deg);
+    }
+
+    70% {
+        transform: skewX(-50deg) skewY(-20deg);
+    }
+
+    71% {
+        transform: skewX(10deg) skewY(-10deg);
+    }
+    }
+
+    .glass-container .glassText .glassText-t2{
+        font-size: 16px;
+        font-weight: normal;
+        margin-top: 20px;
+        /* 阴影 */
+        text-shadow: 1px 1px 2px #333333;
+        margin-left: 90px;
+
+    }
+    /* 左侧边栏 */
+    .content .leftSticky{
+      width: 126px;
+      height: 410px;
+      float: left;
+      margin-left: 50px;
+      position: sticky;
+      top: 200px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      border-radius: 30px;
+      backdrop-filter: blur(10px);
+      background-color: rgba(0,0,0, 0.009);
+      box-shadow: rgba(0, 0, 0, 0.3) 2px 4px 8px;
+      /* border: 2px rgba(255,255,255,0.4) solid; */
+      border-bottom: 2px rgba(229, 229, 229, 0.35) solid;
+      /* border-right: 2px rgba(229, 229, 229, 0.35) solid; */
+      
+      z-index: 10;
+    }
+    /* 右侧边栏 */
+    .content .rightSticky{
+      width: 126px;
+      height: 410px;
+      float: right;
+      margin-right: 50px;
+      position: sticky;
+      top: 200px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      border-radius: 70px;
+      backdrop-filter: blur(10px);
+      background-color: rgba(0,0,0, 0.009);
+      box-shadow: rgba(0, 0, 0, 0.3) 2px 4px 8px;
+      /* border: 2px rgba(255,255,255,0.4) solid; */
+      border-bottom: 2px rgba(229, 229, 229, 0.35) solid;
+      /* border-right: 2px rgba(229, 229, 229, 0.35) solid; */
+      z-index: 10;
+    }
+    .content .weChat{
+      width: auto;
+      height: 300px;
+      position: absolute;
+      top: 1210px;
+      right: 70px;
+      z-index: 1;
+    }
+    /* 呼吸灯 */
+    .content .rightSticky .breathLight{
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      top: 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .content .rightSticky .breathLight .big{
+      width: 100px;
+      height: 100px;
+      border: 10px solid rgba(137, 43, 226, 0.244);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: breath 2s ease-in-out infinite alternate;
+    }
+    .content .rightSticky .breathLight .small{
+      width: 50px;
+      height: 50px;
+      border: 3px solid rgba(153, 205, 50, 0.192);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: breath 2s ease-in-out infinite alternate;
+    }
+    /* 声明动画 */
+    @keyframes breath{
+      0%{
+        transform: scale(1);
+      }
+      100%{
+        transform: scale(1.6);
+      }
+    }
+    /* 侧边栏回到顶部 */
+    .content .rightSticky .backTop{
+      width: 100px;
+      height: 70px;
+      border-radius: 50%;
+      /* 对角渐变色 */
+      background: linear-gradient(45deg, #9900ff4c, #ff45d142);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border-radius: 29% 71% 58% 42% / 27% 60% 40% 73% ;
+      backdrop-filter: blur(10px);
+      background-color: rgba(0,0,0, 0.009);
+      box-shadow: rgba(0, 0, 0, 0.3) 2px 4px 8px;
+      position: absolute;
+      bottom: 12px;
+      transition: all 0.5s;
+    }
+    /* 返回顶部悬停变色 */
+    .content .rightSticky .backTop:hover{
+      background: linear-gradient(45deg, #4b2fff42, #00ff6a4c);
+      border-radius: 75% 25% 22% 78% / 81% 33% 67% 19% ;
+      transition: all 0.5s;
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 新品首发区域样式 */
+    .newProduct-area{
+      width: 1090px;
+      height: 510px;
+      margin: 0 auto;
+    }
+    /* 新品首发标题区域 */
+    .newProduct-area .newProduct-title{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 10px;
+    }
+    /* 新品首发商品展示区域 */
+    .newProduct-area .newProduct-product{
+      width: 100%;
+      height: 365px;
+    }
+    /* 新品首发标题1样式 */
+    .newProduct-area .newProduct-title .newProduct-title-t1{
+      width: 15%;
+      font-size: 26px;
+      font-weight: bolder;
+      color: #333333;
+    }
+    /* 标题1悬停变色 */
+    .newProduct-area .newProduct-title .newProduct-title-t1:hover{
+      color: #cc9756;
+      /* 鼠标变小手 */
+      cursor: pointer;
+
+    }
+    /* 新品首发标题2样式 */
+    .newProduct-area .newProduct-title .newProduct-title-t2{
+      width: 15%;
+      font-size: 14px;
+      font-weight: lighter;
+      color: #333333;
+    }
+    /* 新品首发标题3样式 */
+    .newProduct-area .newProduct-title .newProduct-title-t3{
+      width: 70%;
+      font-size: 14px;
+      font-weight: lighter;
+      color: #333333;
+      text-align: right;
+    }
+    /* 标题3悬停变色 */
+    .newProduct-area .newProduct-title .newProduct-title-t3:hover{
+      color: #cc9756;
+      /* 鼠标变小手 */
+      cursor: pointer;
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 新品首发商品展示区 */
+    .newProduct-area .newProduct-product{
+      width: 100%;
+      height: 365px;
+      display: flex;
+      justify-content: space-between;
+    }
+    /* 新品首发商品展示区商品卡片整体样式 */
+    .newProduct-area .newProduct-product>div{
+      width: 265px;
+      height: 365px;
+    }
+    /* 商品卡片背景图片样式 */
+    .newProduct-area .newProduct-product .newProduct-product-img{
+      width: 265px;
+      height: 265px;
+      background-color: #F4F4F4;
+    }
+    /* 商品1 的图片样式 */
+    .newProduct-area .newProduct-product .newProduct-product-p1 .newProduct-product-img{
+      background-image: url('./static/melon.png');
+      background-size: 265px 265px;
+      cursor: pointer;
+    }
+    /* 商品1 图片悬停改变 */
+    .newProduct-area .newProduct-product .newProduct-product-p1:hover .newProduct-product-img{
+      background-image: url('./static/melon2.webp');
+    }
+    /* 商品1 悬停时改变样式 */
+    .newProduct-area .newProduct-product .newProduct-product-p1:hover{
+      box-shadow: 0 0 3px 3px #d2d2d287;
+      background-color: #F4F0EA;
+    }
+    /* 商品2 的图片样式 */
+    .newProduct-area .newProduct-product .newProduct-product-p2 .newProduct-product-img{
+      background-image: url('./static/baozi.webp');
+      background-size: 265px 265px;
+      cursor: pointer;
+    }
+    /* 商品2 图片悬停改变 */
+    .newProduct-area .newProduct-product .newProduct-product-p2:hover .newProduct-product-img{
+      background-image: url('./static/baozi2.webp');
+    }
+    /* 商品2 悬停时改变样式 */
+    .newProduct-area .newProduct-product .newProduct-product-p2:hover{
+      box-shadow: 0 0 3px 3px #d2d2d287;
+      background-color: #F4F0EA;
+    }
+    /* 商品3 的图片样式 */
+    .newProduct-area .newProduct-product .newProduct-product-p3 .newProduct-product-img{
+      background-image: url('./static/wetPaper.webp');
+      background-color: white;
+      background-size: 265px 265px;
+      cursor: pointer;
+    }
+    /* 商品3 图片悬停改变 */
+    .newProduct-area .newProduct-product .newProduct-product-p3:hover .newProduct-product-img{
+      background-color: #7ecdff84;
+    }
+    /* 商品3 悬停时改变样式 */
+    .newProduct-area .newProduct-product .newProduct-product-p3:hover{
+      box-shadow: 0 0 3px 3px #d2d2d287;
+      background-color: #F4F0EA;
+    }
+    /* 商品4 的图片样式 */
+    .newProduct-area .newProduct-product .newProduct-product-p4 .newProduct-product-img{
+      background-image: url('./static/mango.webp');
+      background-size: 265px 265px;
+      cursor: pointer;
+    }
+    /* 商品4 图片悬停改变 */
+    .newProduct-area .newProduct-product .newProduct-product-p4:hover .newProduct-product-img{
+      background-image: url('./static/mango2.webp');
+    }
+    /* 商品4 悬停时改变样式 */
+    .newProduct-area .newProduct-product .newProduct-product-p4:hover{
+      box-shadow: 0 0 3px 3px #d2d2d287;
+      background-color: #F4F0EA;
+    }
+    /* 商品卡片描述样式 */
+    .newProduct-area .newProduct-product .newProduct-product-desc{
+      width: 70%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bolder;
+      color: #333333;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    /* 商品卡片描述悬停变色 */
+    .newProduct-area .newProduct-product .newProduct-product-desc:hover{
+      color: #cc9756;
+    }
+    /* 商品卡片价格样式 */
+    .newProduct-area .newProduct-product .newProduct-product-price{
+      width: 40%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bolder;
+      color: red;
+      margin-top: 10px;
+    }
+    /* 原价样式 */
+    .newProduct-area .newProduct-product .newProduct-product-price .zkPrice{
+      text-decoration: line-through;
+      font-size: 12px;
+      font-weight: normal;
+      color: #999999;
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 人气推荐区域底色样式 */
+    .hotProduct-area-backColor{
+      width: 100%;
+      height: 738px;
+      margin: 0 auto;
+      /* 渐变背景 */
+      /* background: linear-gradient(180deg, #F4F0EA 0%, #FFFFFF 100%); */
+      /* background-color: #F4F0EA; */
+      background-image: linear-gradient(45deg, #f4f0ea 33.33%, #ffffff00 33.33%, #ffffff00 50%, #f4f0ea 50%, #f4f0ea 83.33%, #ffffff00 83.33%, #ffffff00 100%);
+
+      /* background-image: linear-gradient(45deg, #333333 33.33%, #ffffff00 33.33%, #ffffff00 50%, #f4f0ea 50%, #f4f0ea 83.33%, #ffffff00 83.33%, #ffffff00 100%); */
+
+
+      background-size: 84.85px 84.85px;
+      
+      background-size: 56.57px 56.57px;
+      
+    }
+    /* 人气推荐区域样式 */
+    .hotProduct-area{
+      width: 1090px;
+      height: 738px;
+      margin: 0 auto;
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 人气推荐标题区域 */
+    .hotProduct-area .hotProduct-title{
+      width: 100%;
+      height: 50px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 10px;
+      padding-top: 38px;
+    }
+    /* 人气推荐商品展示区域 */
+    .hotProduct-area .hotProduct-product{
+      width: 100%;
+      height: 365px;
+    }
+    /* 人气标题1样式 */
+    .hotProduct-area .hotProduct-title .hotProduct-title-t1{
+      width: 15%;
+      font-size: 26px;
+      font-weight: bolder;
+      color: #333333;
+    }
+    /* 标题1悬停变色 */
+    .hotProduct-area .hotProduct-title .hotProduct-title-t1:hover{
+      color: #cc9756;
+      /* 鼠标变小手 */
+      cursor: pointer;
+    }
+    /* 人气推荐标题2样式 */
+    .hotProduct-area .hotProduct-title .hotProduct-title-t2{
+      width: 6%;
+      font-size: 12px;
+      font-weight: lighter;
+      color: #cc9756;
+      text-align: center;
+      padding-bottom: 3px;
+      border-bottom: 3px solid #cc9756;
+
+    }
+    /* 标题2 悬停变色 */
+    /* .hotProduct-area .hotProduct-title .hotProduct-title-t2:hover{
+      color: #cc9756;
+      cursor: pointer;
+      border-bottom: 3px solid #cc9756;
+    } */
+    /* 人气推荐标题3样式 */
+    .hotProduct-area .hotProduct-title .hotProduct-title-t3{
+      width: 6%;
+      font-size: 12px;
+      font-weight: lighter;
+      color: #333333;
+      text-align: center;
+      margin-left: 50px;
+      padding-bottom: 3px;
+    }
+    /* 标题3 悬停变色 */
+    .hotProduct-area .hotProduct-title .hotProduct-title-t3:hover{
+      color: #cc9756;
+      /* 鼠标变小手 */
+      cursor: pointer;
+      border-bottom: 3px solid #cc9756;
+    }
+    /* 人气推荐标题4样式 */
+    .hotProduct-area .hotProduct-title .hotProduct-title-t4{
+      width: 73%;
+      font-size: 14px;
+      font-weight: lighter;
+      color: #333333;
+      text-align: right;
+      cursor: pointer;
+    }
+    /* 标题4悬停变色 */
+    .hotProduct-area .hotProduct-title .hotProduct-title-t4:hover{
+      color: #cc9756;
+      /* 鼠标变小手 */
+      cursor: pointer;
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 人气推荐商品展示区 */
+    .hotProduct-area .hotProduct-product{
+      width: 100%;
+      height: 570px;
+      display: flex;
+      justify-content: space-between;
+    }
+    /* 人气推荐商品左侧区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-left{
+      width: 390px;
+      height: 570px;
+      background-color: white;
+      box-shadow: 0 0 5px rgb(222, 222, 222);
+
+    }
+    /* 左侧商品图片区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-left .hotProduct-product-left-p1-img{
+      width: 390px;
+      height: 410px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid rgba(207, 207, 207, 0.414);
+      overflow: hidden;
+    }
+    /* 左侧商品描述区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-left .hotProduct-product-left-p1-desc{
+      width: 260px;
+      height: 70px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bolder;
+      color: #333333;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+    /* 左侧商品描述悬停变色 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-left .hotProduct-product-left-p1-desc:hover{
+      color: #cc9756;
+      /* 鼠标变小手 */
+      cursor: pointer;
+    }
+    /* 左侧商品价格区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-left .hotProduct-product-left-p1-price{
+      width: 390px;
+      height: 30px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bolder;
+      color: red;
+    }
+    /* 左侧商品原价 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-left .hotProduct-product-left-p1-price .leftHotPrice{
+      text-decoration: line-through;
+      font-size: 14px;
+      font-weight: normal;
+      color: #999999;
+    }
+    /* 左侧商品图片 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-left .hotProduct-product-left-p1-img img{
+      width: 320px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 1s;
+    }
+    /* 左侧商品图片悬停变大 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-left:hover .hotProduct-product-left-p1-img img{
+      transform: scale(1.2);
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 人气推荐商品右侧区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right{
+      width: 700px;
+      height: 570px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    /* 人气推荐商品右侧区域商品卡片样式 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right>div{
+      width: 223px;
+      height: 280px;
+      background-color: white;
+      margin-top: 2px;
+      margin-left: 10px;
+      box-shadow: 0 0 5px rgb(222, 222, 222);
+    }
+    /* 右侧商品1图片区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p1-img{
+      width: 223px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid rgba(207, 207, 207, 0.414);
+      overflow: hidden;
+    }
+    /* 右侧商品1描述区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p1-desc{
+      width: 135px;
+      height: 50px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bolder;
+      color: #333333;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    /* 右侧商品1描述悬停变色 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p1-desc:hover{
+      color: #cc9756;
+      /* 鼠标变小手 */
+      cursor: pointer;
+    }
+    /* 右侧商品1价格区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p1-price{
+      width: 223px;
+      height: 30px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: normal;
+      color: red;
+    }
+    /* 右侧商品原价 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p1-price .rightHotPrice{
+      text-decoration: line-through;
+      font-size: 8px;
+      font-weight: normal;
+      color: #999999;
+    }
+    /* 右侧商品1图片 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p1-img img{
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 1s;
+    }
+    /* 右侧商品1图片悬停变大 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p1:hover .hotProduct-product-right-p1-img img{
+      transform: scale(1.2);
+    }
+  /* ------------------------------------------------------------------------------- */  
+    /* 右侧商品2图片区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p2-img{
+      width: 223px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid rgba(207, 207, 207, 0.414);
+      overflow: hidden;
+    }
+    /* 右侧商品2描述区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p2-desc{
+      width: 135px;
+      height: 50px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bolder;
+      color: #333333;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    /* 右侧商品2描述悬停变色 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p2-desc:hover{
+      color: #cc9756;
+      /* 鼠标变小手 */
+      cursor: pointer;
+    }
+    /* 右侧商品2价格区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p2-price{
+      width: 223px;
+      height: 30px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: normal;
+      color: red;
+    }
+    /* 右侧商品原价 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p2-price .rightHotPrice{
+      text-decoration: line-through;
+      font-size: 8px;
+      font-weight: normal;
+      color: #999999;
+    }
+    /* 右侧商品2图片 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p2-img img{
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 1s;
+    }
+    /* 右侧商品2图片悬停变大 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p2:hover .hotProduct-product-right-p2-img img{
+      transform: scale(1.2);
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 右侧商品3图片区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p3-img{
+      width: 223px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid rgba(207, 207, 207, 0.414);
+      overflow: hidden;
+    }
+    /* 右侧商品3描述区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p3-desc{
+      width: 135px;
+      height: 50px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bolder;
+      color: #333333;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    /* 右侧商品3描述悬停变色 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p3-desc:hover{
+      color: #cc9756;
+      /* 鼠标变小手 */
+      cursor: pointer;
+    }
+    /* 右侧商品3价格区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p3-price{
+      width: 223px;
+      height: 30px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: normal;
+      color: red;
+    }
+    /* 右侧商品原价 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p3-price .rightHotPrice{
+      text-decoration: line-through;
+      font-size: 8px;
+      font-weight: normal;
+      color: #999999;
+    }
+    /* 右侧商品3图片 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p3-img img{
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 1s;
+    }
+    /* 右侧商品3图片悬停变大 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p3:hover .hotProduct-product-right-p3-img img{
+      transform: scale(1.2);
+    }
+  /* ------------------------------------------------------------------------------- */
+    /* 右侧商品4图片区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p4-img{
+      width: 223px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid rgba(207, 207, 207, 0.414);
+      overflow: hidden;
+    }
+    /* 右侧商品4描述区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p4-desc{
+      width: 135px;
+      height: 50px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bolder;
+      color: #333333;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    /* 右侧商品4描述悬停变色 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p4-desc:hover{
+      color: #cc9756;
+      /* 鼠标变小手 */
+      cursor: pointer;
+    }
+    /* 右侧商品4价格区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p4-price{
+      width: 223px;
+      height: 30px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: normal;
+      color: red;
+    }
+    /* 右侧商品原价 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p4-price .rightHotPrice{
+      text-decoration: line-through;
+      font-size: 8px;
+      font-weight: normal;
+      color: #999999;
+    }
+    /* 右侧商品4图片 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p4-img img{
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 1s;
+    }
+    /* 右侧商品4图片悬停变大 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p4:hover .hotProduct-product-right-p4-img img{
+      transform: scale(1.2);
+    }
+  /* ------------------------------------------------------------------------------- */
+  /* 右侧商品5图片区域 */
+  .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p5-img{
+      width: 223px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid rgba(207, 207, 207, 0.414);
+      overflow: hidden;
+    }
+    /* 右侧商品5描述区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p5-desc{
+      width: 135px;
+      height: 50px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bolder;
+      color: #333333;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    /* 右侧商品5描述悬停变色 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p5-desc:hover{
+      color: #cc9756;
+      /* 鼠标变小手 */
+      cursor: pointer;
+    }
+    /* 右侧商品5价格区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p5-price{
+      width: 223px;
+      height: 30px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: normal;
+      color: red;
+    }
+    /* 右侧商品原价 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p5-price .rightHotPrice{
+      text-decoration: line-through;
+      font-size: 8px;
+      font-weight: normal;
+      color: #999999;
+    }
+    /* 右侧商品5图片 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p5-img img{
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 1s;
+    }
+    /* 右侧商品5图片悬停变大 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p5:hover .hotProduct-product-right-p5-img img{
+      transform: scale(1.2);
+    }
+  /* ------------------------------------------------------------------------------- */
+  /* 右侧商品6图片区域 */
+  .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p6-img{
+      width: 223px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid rgba(207, 207, 207, 0.414);
+      overflow: hidden;
+    }
+    /* 右侧商品6描述区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p6-desc{
+      width: 135px;
+      height: 50px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bolder;
+      color: #333333;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    /* 右侧商品6描述悬停变色 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p6-desc:hover{
+      color: #cc9756;
+      /* 鼠标变小手 */
+      cursor: pointer;
+    }
+    /* 右侧商品6价格区域 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p6-price{
+      width: 223px;
+      height: 30px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: normal;
+      color: red;
+    }
+    /* 右侧商品原价 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p6-price .rightHotPrice{
+      text-decoration: line-through;
+      font-size: 8px;
+      font-weight: normal;
+      color: #999999;
+    }
+    /* 右侧商品6图片 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p6-img img{
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 1s;
+    }
+    /* 右侧商品6图片悬停变大 */
+    .hotProduct-area .hotProduct-product .hotProduct-product-right .hotProduct-product-right-p6:hover .hotProduct-product-right-p6-img img{
+      transform: scale(1.2);
+    }
+  /* ------------------------------------------------------------------------------- */
+ 
+/* *********************************************************************************************************** */
+  /* 底部区域样式 */
+  .footer{
+    width: 100%;
+    height: 330px;
+    background: linear-gradient(to bottom, #000000, #414141);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .footer .foot{
+    width: auto;
+    height: 200px;
+    margin: 0 auto;
+  }
+  .footer .foot img{
+    width: auto;
+    height: 260px;
+  }
+  
